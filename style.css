@@ -10,11 +10,15 @@ h1 {
 }
 
 .envelope {
+    position: relative;
     width: 250px;
     height: 180px;
     background-color: #ffccbc;
+    margin: 50px auto;
     border-radius: 10px;
+    overflow: hidden;
     cursor: url('heart_cursor.gif'), auto;
+    transition: transform 0.5s;
 }
 
 
