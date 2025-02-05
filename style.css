@@ -69,7 +69,7 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 30%; /* Makes sure both lists fit side by side */
+    width: 48%; /* Makes sure both lists fit side by side */
 }
 
 .lists_container ul li {
@@ -82,6 +82,7 @@ body {
 .card {
     width: 300px; /* Adjust width as needed */
     padding: 20px;
+    text-align: center;
 }
 
 
@@ -115,17 +116,17 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 48%;
+    width: 40%;
 }
 
 .lists_container ul li {
     text-align: left;
-    font-size: 16px;
+    font-size: 10px;
     padding: 5px 0;
 }
 
 .card {
-    width: 00px; 
+    width: 300px; 
     padding: 20px;
     text-align: center;
 }
