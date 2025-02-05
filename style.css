@@ -13,8 +13,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px;
-    height: 200px;
+    width: 350;
+    height: 250;
     background-color: #ffc0a5;
     margin: 50px auto;
     border-radius: 10px;
@@ -29,15 +29,16 @@ h1 {
     align-items: center;
     width: 0;
     height: 0;
-    border-left: 125px solid transparent;
-    border-right: 125px solid transparent;
-    border-bottom: 120px solid #ff8a65;
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-bottom: 140px solid #ffc0a5;
     top: 0;
     left: 0;
     right: 0;
     margin: auto;
     transition: transform 0.5s;
 }
+
 
 .envelope .body {
     display: flex;
