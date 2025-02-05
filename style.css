@@ -47,8 +47,8 @@ body {
 .card {
     position: absolute;
     background-color: #eae2b7;
-    width: 380px;  /* Adjusted to fit lists properly */
-    height: auto;  /* Allows it to expand dynamically */
+    width: 320px;  
+    height: 200px;  
     padding: 20px;
     top: 5px;
     left: 15px;
