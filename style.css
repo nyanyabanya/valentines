@@ -69,7 +69,7 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 48%; /* Makes sure both lists fit side by side */
+    width: 30%; /* Makes sure both lists fit side by side */
 }
 
 .lists_container ul li {
