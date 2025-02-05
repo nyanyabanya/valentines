@@ -15,7 +15,7 @@ body {
     background: #1abc9c;
     color: white;
     font-size: 30px;
-  }
+}
 
 /* Container positioning */
 .container {
@@ -50,13 +50,16 @@ body {
     left: 50px;
     border-radius: 30px 0 0 0;
 }
+
 .card {
     position: absolute;
     background-color: #eae2b7;
-    width: 250px;  
-    height: 200px;  
+    width: 250px;
+    height: 200px;
     padding: 20px;
-    top: 30px; /* Adjusted to better align within the envelope */
+    overflow-y: auto;
+    top: 50px;
+    /* Adjusted to better align within the envelope */
     left: 50%;
     transform: translateX(-50%) translateY(0);
     box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
@@ -84,7 +87,6 @@ body {
     top: 5px;
     width: 0;
     height: 0;
-    z-index: 10;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -95,12 +97,12 @@ body {
 
 .shadow {
     position: absolute;
-    width: 320px;  /* Match envelope width */
+    width: 320px;
+    /* Match envelope width */
     height: 20px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.3);
-    top: 220px; /* Positioned just below the envelope */
-    left: 50%;
+    bottom: -40px;
     transform: translateX(-50%);
     animation: scale 3s linear infinite;
     z-index: -1;
@@ -109,18 +111,24 @@ body {
 
 /* ANIMATIONS */
 @keyframes up {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-30px);
     }
 }
 
 @keyframes scale {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scaleX(1);
     }
+
     50% {
         transform: scaleX(0.85);
     }
@@ -142,6 +150,7 @@ body {
         transform: translateY(0) scale(0.5);
         opacity: 1;
     }
+
     100% {
         transform: translateY(-200px) scale(1);
         opacity: 0;
@@ -165,6 +174,7 @@ body {
         transform: translateY(-10px);
         opacity: 1;
     }
+
     100% {
         transform: translateY(100vh);
         opacity: 0;
