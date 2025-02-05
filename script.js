@@ -1,3 +1,3 @@
 function openLetter() {
-    document.querySelector(".envelope").classList.toggle("open");
+    document.querySelector(".envelope-container").classList.toggle("open");
 }

@@ -2,29 +2,37 @@ body {
     background-color: rgb(255, 214, 221);
     text-align: center;
     font-family: Arial, sans-serif;
-    cursor: url('images/heart_cursor.gif'), auto;
 }
 
 h1 {
     color: red;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
+/* Envelope Container */
+.envelope-container {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    margin: 50px auto;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+/* Envelope Base */
 .envelope {
     position: relative;
     width: 320px;
     height: 200px;
     background-color: #ffccbc;
-    margin: 50px auto;
     border-radius: 5px;
     overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.5s;
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
 
+/* Envelope Flap */
 .envelope .flap {
     position: absolute;
     top: 0;
@@ -35,8 +43,10 @@ h1 {
     border-right: 160px solid transparent;
     border-bottom: 100px solid #ff8a65;
     z-index: 2;
+    transition: transform 0.5s ease-in-out;
 }
 
+/* Envelope Body */
 .envelope .body {
     width: 320px;
     height: 140px;
@@ -47,6 +57,7 @@ h1 {
     z-index: 1;
 }
 
+/* Letter Inside */
 .letter {
     position: absolute;
     width: 280px;
@@ -66,12 +77,18 @@ h1 {
     border-radius: 5px;
 }
 
+/* When the envelope is clicked */
+.open .flap {
+    transform: rotateX(180deg);
+}
+
 .open .letter {
-    transform: translate(-50%, -80px);
+    transform: translate(-50%, -100px);
     opacity: 1;
     z-index: 3;
 }
 
+/* Letter content */
 .letter p, .letter ul {
     font-size: 12px;
     line-height: 1.6;
@@ -85,33 +102,9 @@ h1 {
     border-radius: 10px;
 }
 
-.letter p {
-    margin: 0;
-    color: #d81b60;
-}
-
-.open .flap {
-    transform: rotateX(180deg);
-}
-
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
-}
-
-.gif-list {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.gif-list li::before {
-    content: " ";
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-image: url('images/bulletpoint.gif');
-    background-size: cover;
-    margin-right: 10px;
 }
