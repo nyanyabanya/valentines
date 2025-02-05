@@ -16,3 +16,17 @@ h1 {
     border-radius: 10px;
     cursor: url('heart_cursor.gif'), auto;
 }
+
+.gif-list{
+    list-style: none;
+}
+
+.gif-list li::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url('bulletpoint.gif'); /* Replace with your GIF file */
+    background-size: cover;
+    margin-right: 10px;
+}
