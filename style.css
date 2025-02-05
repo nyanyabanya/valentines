@@ -8,44 +8,30 @@ h1 {
     color: red;
     font-size: 3em;
 }
+
 .envelope {
     position: relative;
-    width: 350px;
-    height: 250px;
+    width: 320px;
+    height: 220px;
     background-color: #ffccbc;
     margin: 50px auto;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.5s;
-}
-
-.letter {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-color: #fff3e0;
-    top: 70px; /* Moves it lower inside the envelope */
-    left: 15px;
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease-in-out;
-    z-index: 1; /* Make sure it starts behind */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .envelope .body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 350px; /* Fix width */
-    height: 180px; /* Adjust height */
+    width: 320px;
+    height: 150px;
     background-color: #ffab91;
     border-radius: 10px;
     position: relative;
-    margin: 0 auto; /* Center it */
+    margin: 0 auto;
 }
 
 .envelope .fold {
@@ -54,20 +40,44 @@ h1 {
     height: 100px;
     top: 0;
     left: 0;
-    z-index: 2; /* Ensure the flap is on top */
+    z-index: 2;
+}
+
+.letter {
+    position: absolute;
+    width: 280px;
+    height: 180px;
+    background-color: #fff3e0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+}
+
+.open .letter {
+    transform: translate(-50%, -80px);
+    opacity: 1;
+    z-index: 3;
 }
 
 .letter p, .letter ul {
-    font-size: 10px;
-    line-height: 1.3;
+    font-size: 12px;
+    line-height: 1.6;
     text-align: center;
 }
 
 .letter img {
     display: block;
-    max-width: 80px; 
+    max-width: 80px;
     margin: 10px auto;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .letter p {
@@ -79,15 +89,11 @@ h1 {
     transform: rotateX(180deg);
 }
 
-.open .letter {
-    transform: translateY(-100px);
-}
-
 ul {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center; 
+    text-align: center;
 }
 
 .gif-list {
@@ -100,7 +106,7 @@ ul {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background-image: url('images/bulletpoint.gif'); /* Make sure this file exists */
+    background-image: url('images/bulletpoint.gif');
     background-size: cover;
     margin-right: 10px;
 }
