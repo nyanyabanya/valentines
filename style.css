@@ -89,7 +89,7 @@ body {
 
 /* FIX SHADOW POSITION */
 .shadow {
-    position: relative;
+    position: absolute;
     width: 320px;  /* Match envelope width */
     height: 20px;
     border-radius: 50%;
