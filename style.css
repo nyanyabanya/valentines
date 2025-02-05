@@ -74,7 +74,7 @@ h1 {
     color: #d81b60;
 }
 
-.open .flap {
+.open .fold {
     transform: rotateX(180deg);
 }
 
