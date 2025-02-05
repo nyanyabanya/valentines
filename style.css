@@ -36,18 +36,18 @@ h1 {
     z-index: 1; /* Make sure it starts behind */
 }
 
-
 .envelope .body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 130px;
+    width: 350px; /* Fix width */
+    height: 180px; /* Adjust height */
     background-color: #ffab91;
-    bottom: 0;
-    left: 0;
     border-radius: 10px;
+    position: relative;
+    margin: 0 auto; /* Center it */
 }
+
 .envelope .fold {
     position: absolute;
     width: 100%;
