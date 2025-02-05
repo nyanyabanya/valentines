@@ -39,29 +39,35 @@ body {
     border-radius: 30px 0 0 0;
 }
 
+/* Make the card larger to fit two lists */
 .card {
     position: absolute;
     background-color: #eae2b7;
-    width: 270px;
-    height: 170px;
+    width: 350px; /* Increased width to fit two lists */
+    height: auto; /* Adjust height dynamically */
+    padding: 20px;
     top: 5px;
     left: 15px;
     box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
     transform: translateY(0);
     opacity: 0;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 .card.open {
     transform: translateY(-100px);
     opacity: 1;
 }
 
+/* Adjust the lists to sit side by side */
 .lists_container {
-    display: flex; /* Enables side-by-side layout */
-    justify-content: space-between; /* Adds space between the lists */
-    gap: 20px; /* Space between the two lists */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
     margin-top: 10px;
 }
 
@@ -69,7 +75,7 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 48%; /* Makes sure both lists fit side by side */
+    width: 45%; /* Ensure both lists fit */
 }
 
 .lists_container ul li {
@@ -78,14 +84,7 @@ body {
     padding: 5px 0;
 }
 
-/* Ensure the card is wide enough */
-.card {
-    width: 300px; /* Adjust width as needed */
-    padding: 20px;
-    text-align: center;
-}
-
-
+/* Fix front envelope animation */
 .front {
     position: absolute;
     border-right: 180px solid #f4978e;
@@ -104,39 +103,15 @@ body {
     opacity: 0;
 }
 
+/* Fix shadow positioning */
 .shadow {
-    position: relative.lists_container {
-    display: flex; /* Enables side-by-side layout */
-    justify-content: space-between; /* Adds space between the lists */
-    gap: 20px; /* Space between the two lists */
-    margin-top: 10px;
-}
-
-.lists_container ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 48%; /* Makes sure both lists fit side by side */
-}
-
-.lists_container ul li {
-    text-align: left;
-    font-size: 16px;
-    padding: 5px 0;
-}
-
-.card {
-    width: 300px; /* Adjust width as needed */
-    padding: 20px;
-    text-align: center;
-}
-;
-    width: 330px;
+    position: absolute;
+    width: 350px; /* Match card width */
     height: 25px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.3);
-    top: 265px;
-    left: -15px;
+    top: 285px;
+    left: 0;
     animation: scale 3s linear infinite;
     z-index: -1;
 }
