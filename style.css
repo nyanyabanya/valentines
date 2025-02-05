@@ -2,6 +2,7 @@ body {
     background-color: rgb(255, 214, 221);
     text-align: center;
     font-family: Arial, sans-serif;
+    cursor: url('images/heart_cursor.gif'), auto;
 }
 
 h1 {
@@ -12,35 +13,38 @@ h1 {
 .envelope {
     position: relative;
     width: 320px;
-    height: 220px;
+    height: 200px;
     background-color: #ffccbc;
     margin: 50px auto;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.5s;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+}
+
+.envelope .flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 100px solid #ff8a65;
+    z-index: 2;
 }
 
 .envelope .body {
     width: 320px;
-    height: 150px;
+    height: 140px;
     background-color: #ffab91;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     position: relative;
     margin: 0 auto;
-}
-
-.envelope .fold {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    top: 0;
-    left: 0;
-    z-index: 2;
+    z-index: 1;
 }
 
 .letter {
@@ -59,6 +63,7 @@ h1 {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
     z-index: 1;
+    border-radius: 5px;
 }
 
 .open .letter {
@@ -85,7 +90,7 @@ h1 {
     color: #d81b60;
 }
 
-.open .fold {
+.open .flap {
     transform: rotateX(180deg);
 }
 
