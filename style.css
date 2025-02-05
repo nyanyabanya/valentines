@@ -1,110 +1,123 @@
 body {
-    background-color: rgb(255, 214, 221);
-    text-align: center;
-    font-family: Arial, sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: bisque;
 }
 
-h1 {
-    color: red;
-    font-size: 2.5em;
-}
-
-/* Envelope Container */
-.envelope-container {
+.container {
     position: relative;
-    width: 320px;
-    height: 200px;
-    margin: 50px auto;
-    cursor: pointer;
-    transition: transform 0.5s;
 }
 
-/* Envelope Base */
+.valentines {
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+}
+
 .envelope {
     position: relative;
-    width: 320px;
-    height: 200px;
-    background-color: #ffccbc;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-/* Envelope Flap */
-.envelope .flap {
+    width: 300px;
+    height:200px;
+    background-color: #f08080; 
+  }
+  
+  .envelope:before {
+    background-color: #f08080; 
+    content:"";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 160px solid transparent;
-    border-right: 160px solid transparent;
-    border-bottom: 100px solid #ff8a65;
-    z-index: 2;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Envelope Body */
-.envelope .body {
-    width: 320px;
-    height: 140px;
-    background-color: #ffab91;
-    border-radius: 0 0 10px 10px;
+    width: 212px;
+    height: 212px;
+    transform: rotate(45deg);
+    top:-105px;
+    left:44px;
+    border-radius:30px 0 0 0;
+  }
+  
+  .card {
+    position: absolute;
+    background-color: #eae2b7;
+    width: 270px;
+    height: 170px;
+    top:5px;
+    left:15px;
+    box-shadow: -5px -5px 100px rgba(0,0,0,0.4); 
+  }
+  
+  .card:before {
+    content:"";
+    position: absolute;
+    border:3px solid #003049;
+    border-style: dotted;
+    width: 240px;
+    heighT: 140px;
+    left:12px;
+    top:12px;
+  }
+  
+  .text {
+    position: absolute;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    text-align: center;
+    line-height:25px;
+    top:19px;
+    left:85px;
+    color: #003049;
+  }
+  
+  .heart {
+    background-color: #d62828;
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
     position: relative;
-    margin: 0 auto;
-    z-index: 1;
-}
-
-/* Letter Inside */
-.letter {
+    top: 110px;
+    left:105px;
+    transform: rotate(-45deg);
+    width: 30px;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: #d62828;
+    border-radius: 50%;
+    height: 30px;
     position: absolute;
-    width: 280px;
-    height: 180px;
-    background-color: #fff3e0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50px);
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0;
-    z-index: 1;
-    border-radius: 5px;
-}
-
-/* When the envelope is clicked */
-.open .flap {
-    transform: rotateX(180deg);
-}
-
-.open .letter {
-    transform: translate(-50%, -100px);
-    opacity: 1;
-    z-index: 3;
-}
-
-/* Letter content */
-.letter p, .letter ul {
-    font-size: 12px;
-    line-height: 1.6;
-    text-align: center;
-}
-
-.letter img {
-    display: block;
-    max-width: 80px;
-    margin: 10px auto;
-    border-radius: 10px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
+    width: 30px;
+  }
+  
+  .heart:before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 15px;
+    top: 0;
+  }
+  .front {
+    position: absolute;
+    border-right: 180px solid #f4978e;
+    border-top: 95px solid transparent;
+    border-bottom: 100px solid transparent;
+    left:120px;
+    top:5px;
+    width:0;
+    height:0;
+    z-index:10;
+  }
+  
+  .front:before {
+    position: absolute;
+    content:"";
+    border-left: 300px solid #f8ad9d;
+    border-top: 195px solid transparent;
+    left:-120px;
+    top:-95px;
+    width:0;
+    height:0;
+  }
