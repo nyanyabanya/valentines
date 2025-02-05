@@ -43,17 +43,17 @@ body {
     border-radius: 30px 0 0 0;
 }
 
-/* CARD FIX: Increase width & height */
+/* ✅ CARD FIX: Make it fit inside the envelope */
 .card {
     position: absolute;
     background-color: #eae2b7;
-    width: 380px;  /* Adjusted to fit lists properly */
+    width: 280px;  /* Reduced width to fit inside */
     height: auto;  /* Allows it to expand dynamically */
     padding: 20px;
-    top: 5px;
-    left: 15px;
+    top: 30px;  /* Move it down so it starts inside the envelope */
+    left: 20px;
     box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
-    transform: translateY(0);
+    transform: translateY(0);  /* Default: Inside envelope */
     opacity: 0;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     display: flex;
@@ -61,37 +61,13 @@ body {
     align-items: center;
 }
 
-/* When the card opens */
+/* ✅ Adjust card when opening */
 .card.open {
-    transform: translateY(-100px);
+    transform: translateY(-120px); /* Moves up when opened */
     opacity: 1;
 }
 
-/* LIST CONTAINER: Two-column layout */
-.lists_container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;  /* Ensures wrapping on small screens */
-    gap: 20px;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* List formatting */
-.lists_container ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 45%;  /* Ensures proper spacing */
-}
-
-.lists_container ul li {
-    text-align: left;
-    font-size: 16px;
-    padding: 5px 0;
-}
-
-/* FRONT ENVELOPE */
+/* ✅ Adjust the flap to properly cover the card */
 .front {
     position: absolute;
     border-right: 180px solid #f4978e;
@@ -105,19 +81,44 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
+/* ✅ Open effect for the flap */
 .front.open {
     transform: rotateX(180deg);
     opacity: 0;
 }
 
-/* FIX SHADOW POSITION */
+/* LIST CONTAINER: Two-column layout */
+.lists_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  /* Ensures wrapping on small screens */
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* List formatting */
+.lists_container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 48%;  /* Ensures proper spacing */
+}
+
+.lists_container ul li {
+    text-align: left;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+/* ✅ FIX SHADOW POSITION */
 .shadow {
     position: absolute;
     width: 320px;  /* Match envelope width */
     height: 20px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.3);
-    top: 280px; /* Adjusted for better alignment */
+    top: 250px; /* Adjusted for better alignment */
     left: 0;
     animation: scale 3s linear infinite;
     z-index: -1;
@@ -129,7 +130,7 @@ body {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-30px);
+        transform: translateY(-10px);
     }
 }
 
@@ -139,50 +140,5 @@ body {
     }
     50% {
         transform: scaleX(0.85);
-    }
-}
-
-/* FLOATING HEARTS */
-.floating-heart {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    clip-path: polygon(50% 0%, 100% 30%, 80% 100%, 50% 80%, 20% 100%, 0% 30%);
-    opacity: 1;
-    animation: floatUp 3s linear forwards;
-}
-
-@keyframes floatUp {
-    0% {
-        transform: translateY(0) scale(0.5);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-200px) scale(1);
-        opacity: 0;
-    }
-}
-
-/* CONFETTI HEARTS */
-.confetti {
-    position: fixed;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    background-color: pink;
-    clip-path: polygon(50% 0%, 100% 30%, 80% 100%, 50% 80%, 20% 100%, 0% 30%);
-    opacity: 0.8;
-    animation: fall 5s linear forwards;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(-10px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh);
-        opacity: 0;
     }
 }
