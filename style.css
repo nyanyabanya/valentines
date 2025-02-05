@@ -31,7 +31,7 @@ h1 {
     height: 0;
     border-left: 125px solid transparent;
     border-right: 125px solid transparent;
-    border-bottom: 100px solid #ff8a65;
+    border-bottom: 120px solid #ff8a65;
     top: 0;
     left: 0;
     right: 0;
@@ -64,6 +64,19 @@ h1 {
     font-weight: bold;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease-in-out;
+}
+
+.letter p, .letter ul {
+    font-size: 14px; /* Adjust text size */
+    line-height: 1.4; /* Improves readability */
+    text-align: center;
+}
+
+.letter img {
+    display: block;
+    max-width: 80px; 
+    margin: 10px auto;
+    border-radius: 10px; 
 }
 
 .letter p {
