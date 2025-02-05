@@ -67,29 +67,6 @@ body {
     opacity: 1;
 }
 
-/* LIST CONTAINER: Two-column layout */
-.lists_container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;  /* Ensures wrapping on small screens */
-    gap: 20px;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* List formatting */
-.lists_container ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 45%;  /* Ensures proper spacing */
-}
-
-.lists_container ul li {
-    text-align: left;
-    font-size: 16px;
-    padding: 5px 0;
-}
 
 /* FRONT ENVELOPE */
 .front {
