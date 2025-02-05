@@ -103,7 +103,7 @@ ul {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background-image: url('bulletpoint.gif'); /* Replace with your GIF file */
+    background-image: url('images/bulletpoint.gif'); /* Replace with your GIF file */
     background-size: cover;
     margin-right: 10px;
 }
