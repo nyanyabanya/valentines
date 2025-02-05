@@ -19,34 +19,14 @@ h1 {
     margin: 50px auto;
     border-radius: 10px;
     overflow: hidden;
-    cursor: url('heart_cursor.gif'), auto;
-    transition: transform 0.5s;
-}
-
-.envelope {
-
-    margin: 0 auto; /* Centers it */
-    width: 300px; /* Adjust size */
-    height: 200px;
-    background-color: #ffccbc;
-    border-radius: 10px;
-}
-
-
-.envelope {
-    position: relative;
-    width: 250px;
-    height: 180px;
-    background-color: #ffccbc;
-    margin: 50px auto;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
+    cursor: url('images/heart_cursor.gif'), auto;
     transition: transform 0.5s;
 }
 
 .envelope .fold {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 0;
     height: 0;
     border-left: 125px solid transparent;
@@ -60,7 +40,9 @@ h1 {
 }
 
 .envelope .body {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 250px;
     height: 130px;
     background-color: #ffab91;
@@ -70,7 +52,7 @@ h1 {
 }
 
 .letter {
-    position: absolute;
+    position: relative;
     width: 220px;
     height: 130px;
     background-color: #fff3e0;
@@ -104,17 +86,17 @@ ul {
     text-align: center; /* Centers the list */
 }
 
-
-.gif-list{
+.gif-list {
     list-style: none;
+    padding-left: 20px;
 }
 
 .gif-list li::before {
-    content: "";
+    content: " ";
     display: inline-block;
     width: 25px;
     height: 25px;
-    background-image: url('images/bulletpoint.gif'); /* Replace with your GIF file */
+    background-image: url('images/bulletpoint.gif'); /* Make sure this file exists */
     background-size: cover;
     margin-right: 10px;
 }
