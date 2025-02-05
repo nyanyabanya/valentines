@@ -58,8 +58,8 @@ h1 {
 }
 
 .letter p, .letter ul {
-    font-size: 14px; /* Adjust text size */
-    line-height: 1.4; /* Improves readability */
+    font-size: 10px;
+    line-height: 1.;
     text-align: center;
 }
 
@@ -84,10 +84,10 @@ h1 {
 }
 
 ul {
-    list-style: none; /* Removes default bullets */
+    list-style: none; 
     padding: 0;
     margin: 0;
-    text-align: center; /* Centers the list */
+    text-align: center; 
 }
 
 .gif-list {
