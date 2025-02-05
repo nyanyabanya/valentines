@@ -10,7 +10,9 @@ h1 {
 }
 
 .envelope {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 250px;
     height: 180px;
     background-color: #ffccbc;
@@ -19,6 +21,15 @@ h1 {
     overflow: hidden;
     cursor: url('heart_cursor.gif'), auto;
     transition: transform 0.5s;
+}
+
+.envelope {
+
+    margin: 0 auto; /* Centers it */
+    width: 300px; /* Adjust size */
+    height: 200px;
+    background-color: #ffccbc;
+    border-radius: 10px;
 }
 
 
