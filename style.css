@@ -17,6 +17,71 @@ h1 {
     cursor: url('heart_cursor.gif'), auto;
 }
 
+
+.envelope {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    background-color: #ffccbc;
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.envelope .fold {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 100px solid #ff8a65;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform 0.5s;
+}
+
+.envelope .body {
+    position: absolute;
+    width: 250px;
+    height: 130px;
+    background-color: #ffab91;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.letter {
+    position: absolute;
+    width: 220px;
+    height: 130px;
+    background-color: #fff3e0;
+    top: 30px;
+    left: 15px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+}
+
+.letter p {
+    margin: 0;
+    color: #d81b60;
+}
+
+.open .flap {
+    transform: rotateX(180deg);
+}
+
+.open .letter {
+    transform: translateY(-80px);
+}
+
 .gif-list{
     list-style: none;
 }
