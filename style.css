@@ -8,3 +8,11 @@ h1 {
     color: red;
     font-size: 3em;
 }
+
+.envelope {
+    width: 250px;
+    height: 180px;
+    background-color: #ffccbc;
+    border-radius: 10px;
+    cursor: url('heart_cursor.gif'), auto;
+}
